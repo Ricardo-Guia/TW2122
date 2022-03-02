@@ -16,3 +16,5 @@ Eduardo Gomes 26205 - https://github.com/GOMES31/TW2122
 Ruben Silva 24504 - https://github.com/silvaruben14/TW2122
 
 Duarte Xavier 24516 - https://github.com/DrDumania/TW2122
+
+João Macedo 22305 - https://github.com/ipvcjdavid/TW2122
