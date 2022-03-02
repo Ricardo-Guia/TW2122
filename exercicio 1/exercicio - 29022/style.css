@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #bb9f80;
+    color: #fff;
+}
+
+.menu-head{
+ text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.menu-head h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+    margin: 2% 0 2% 0;
+}
+
+.menu-buttons{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 2% auto ;
+}
+
+.menu-buttons button{
+    margin: 0 15px;
+    padding: 5px 10px;
+    border: none;
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.menu-buttons button:hover{
+    background-color: #E5C198FF;
+}
+
+img{
+    width: 150px;
+    margin: 2%;
+}
+
+.menu-body{
+    display: flex;
+    width: 80%;
+    margin: 2% auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.item{
+    display: flex;
+    width: 45%;
+    margin-top: 2%;
+    margin-right: 2%;
+    background-color: white;
+    box-shadow: #555 2px 2px 2px 2px;
+}
+
+.item-informations{
+    margin-top: 2%;
+    margin-right: 2%;
+    color: black;
+}
+
+.item-informations h3{
+    color: darkorange;
+    border-bottom: 2px solid orange;
+}
+
+
+
