@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #bb9f80;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-head h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+
+
+}
+
+.mainContainer {
+
+    width: 1024px;
+}
+
+.mainContainer h1{
+    padding: 50px 0 25px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.mainContainer p{
+    padding: 25px 0;
+    text-align: center;
+}
+
+.mainContainer div.buttonsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer div.buttonsContainer button{
+    margin: 0 25px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mainContainer div.buttonsContainer button:hover{
+    background-color: #ccaf91;
+}
+
+.mainContainer div.contentContainer{
+    display: flex;
+    padding: 25px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mainContainer div.contentContainer div.contentElement{
+    display: flex;
+    width: 49%;
+    padding: 20px;
+    justify-content: flex-start;
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px 0;
+    box-shadow: #666 1px 1px 1px 1px;
+}
+
+.mainContainer div.contentContainer div.contentElement .descriptionContainer{
+    font-size: 14px;
+    width: 100%;
+    color: black;
+    padding: 5px 0;
+    padding: 0 15px;
+}
+
+.mainContainer div.contentContainer div.contentElement .descriptionContainer > *{
+    padding: 0;
+
+    text-align: left;
+}
+
+.mainContainer div.contentContainer div.contentElement .descriptionContainer h1{
+    font-size: 16px;
+    text-align: left;
+    color: yellow;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid yellow;
+    width: 40%;
+}
+
+.mainContainer div.contentContainer div.contentElement .imageContainer{
+    width: 40%;
+}
+
+.mainContainer div.contentContainer div.contentElement .imageContainer img {
+    width: 100%;
+}
