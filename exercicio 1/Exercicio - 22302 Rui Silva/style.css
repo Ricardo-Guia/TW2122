@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #bb9f80;
+    color: #fff;
+}
+.menu-head h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+}
+
+.container {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+    margin-bottom: 5%;
+}
+
+.text {
+    font-family: 'Kaushan Script';
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.btn-cont {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.btn-cont button{
+    font-size: 2em;
+    padding: 20px;
+}
+
+.active {
+    background-color: saddlebrown;
+}
+
+.container-items {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+
+.item .container-imagem {
+    width: 30%;
+    float: left;
+    height: 100%;
+}
+
+.item .container-imagem img {
+    width: 100%;
+    height: 100%;
+}
+
+.item .container-info {
+    color: black;
+    width: 70%;
+    float: left;
+    height: 100%;
+    text-align: left;
+    padding: 2%;
+}
+
+.container-info h3{
+    width: 80px;
+    border-bottom: 3px solid orange;
+    color: sandybrown;
+    margin-bottom: 10px;
+}
+
+.container-info h4{
+    font-size: 1.5em;
+}
+
+.container-info div{
+    font-size: 1.2em;
+    color: brown;
+}
+
+.container-info .categories{
+    font-size: 0.9em;
+    color: brown;
+}
+
+.categories span {
+    font-weight: lighter;
+}
+
+
