@@ -1,42 +1,53 @@
-const buttons = document.
-getElementsByClassName('menu-btn');
+const table = document.getElementById("tableKey");
+    let tbody = table.children[0];
+    let saveThead
+    
+function generateKey(){
+    console.log("Generate Euromilhões key");
 
-const itens = document.
-getElementsByClassName('food-item');
+    const key = {
+        numbers: generateXNumbersBetweenMinAndMax
+        (5,1,50),
+        stars: generateXNumbersBetweenMinAndMax
+        (2,1,12)
+    }
+    key.numbers = sortIntArray(key.numbers);
+    key.stars = sortIntArray(key.stars);
 
-let clickedButton = 'featured';
-selectItens(clickedButton);
-
-for( let button of buttons ) {
-    button.addEventListener(
-        'click',
-        () => {
-            selectItens(button.id);
-        }
-    )
+    addKeyToHtmlTable(key)
 }
 
-function selectItens( id ) {
-    clickedButton = id;
+function generateXNumbersBetweenMinAndMax(
+    lenght,
+    minNumber,
+    maxNumber
+){
+    let numbers = [];
 
-    // removo todas as classes active dos butões
-    for( let button of buttons ) {
-        button.className = 'menu-btn';
+    while(numbers.length < lenght){
+        let randomNumber =
+            Math.random() * (maxNumber - minNumber) + minNumber;
+        numbers.push(Math.floor(randomNumber));
     }
+    return numbers;
+}
 
-    // pelo id recebido, pego no buttao carregado
-    // aplico a class de butao activo
-    let button = document.getElementById(id);
-    button.className = 'menu-btn active-btn';
+function sortIntArray(array) {
+    array.sort((a,b) => a - b)
+}
 
-    for( let item of itens ) {
-        // o item é um element HTML.
-        if(item.className === 'food-item '+ clickedButton)
-        {
-            // mostrar os itens com a class drinks
-            item.style.display = 'grid';
-        } else {
-            item.style.display = 'none';
-        }
-    }
+function addKeyToHtmlTable(key) {
+
+    tbody.innerHTML = tbody.innerHTML
+    + '<tr>'
+        + '<td>' + key.numbers.join(' - ')
+        + ' ** ' + key.stars.join(' - ') + '</td>'
+        + '<td>' + key.numbers.join(' - ') + '</td>'
+        + '<td>' + key.stars.join(' - ') + '</td>'
+    + '</tr>'
+}
+
+function cleanTable(){
+    tbody.innerHTML = '';
+    console.log("Clean Euromilhões keys");
 }

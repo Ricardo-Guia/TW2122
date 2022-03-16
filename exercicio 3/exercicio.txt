@@ -5,3 +5,9 @@
 // função gerarNumeros com os parametros, numero minimo, numero maximo e quantos numeros queremos
 // função para ordenar numeros num dado array
 // função para adicionar a chave gerada, a chave ordenada, e as estrelas na tabela
+
+
+keyObject = {
+    stars:generateNumbers(1,12, 2)
+    numbers:
+}
