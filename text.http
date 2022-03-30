@@ -1,0 +1,5 @@
+GET https://api.thecatapi.com/v1/images/search HTTP/1.1
+#
+GET https://apilist.fun/out/randomdog HTTP/1.1
+#
+GET https://api.pexels.com/v1/ HTTP/1.1

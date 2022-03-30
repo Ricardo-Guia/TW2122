@@ -1,53 +1,56 @@
-const table = document.getElementById("tableKey");
-    let tbody = table.children[0];
-    let saveThead
+const buttonGenerateKey =
+    document.getElementById('generateKey');
+
+const tbody =
+    document.getElementsByTagName('tbody');
     
 function generateKey(){
-    console.log("Generate Euromilhões key");
-
     const key = {
-        numbers: generateXNumbersBetweenMinAndMax
-        (5,1,50),
-        stars: generateXNumbersBetweenMinAndMax
-        (2,1,12)
+        numbers: generateArrayNumbers(1,50,5),
+        stars: generateArrayNumbers(1,12,2)
     }
-    key.numbers = sortIntArray(key.numbers);
-    key.stars = sortIntArray(key.stars);
 
-    addKeyToHtmlTable(key)
+    addKeyToTable(key);
 }
 
-function generateXNumbersBetweenMinAndMax(
-    lenght,
-    minNumber,
-    maxNumber
+buttonGenerateKey.addEventListener(
+    'click',
+    ()=>generateKey()
+)
+
+function addKeyToTable(key){
+    tbody[0].innerHTML +=
+        '<tr>' +
+            '<td>'+ key.numbers.join(',')
+                  + '**' + key.stars.join(',') +
+            '</td>' +
+            '<td>' + sortArray(key.numbers).join(',') +'</td>' +
+            '<td>' + sortArray(key.stars).join(',') +'</td>' +
+        '</td>'    
+}
+
+function sortArray(array){
+    return array.sort((a,b) => a - b);
+}
+
+function generateArrayNumbers (
+    min, max, length
 ){
-    let numbers = [];
+    let generatedNumbers = [];
+    while(generatedNumbers.length < length)
+    {
+        let number =
+            Math.random() * (max-min) + min
 
-    while(numbers.length < lenght){
-        let randomNumber =
-            Math.random() * (maxNumber - minNumber) + minNumber;
-        numbers.push(Math.floor(randomNumber));
+        let numberInt = Math.floor(number);
+
+        if(!generatedNumbers.includes(numberInt)) {
+            generatedNumbers.push(numberInt);
+        }
     }
-    return numbers;
+    return generatedNumbers;
 }
 
-function sortIntArray(array) {
-    array.sort((a,b) => a - b)
-}
-
-function addKeyToHtmlTable(key) {
-
-    tbody.innerHTML = tbody.innerHTML
-    + '<tr>'
-        + '<td>' + key.numbers.join(' - ')
-        + ' ** ' + key.stars.join(' - ') + '</td>'
-        + '<td>' + key.numbers.join(' - ') + '</td>'
-        + '<td>' + key.stars.join(' - ') + '</td>'
-    + '</tr>'
-}
-
-function cleanTable(){
-    tbody.innerHTML = '';
-    console.log("Clean Euromilhões keys");
+function cleanTbody(){
+    tbody[0].innerHTML = '';
 }

@@ -4,19 +4,20 @@ const buttonGenerateKey =
 const tbody =
     document.getElementsByTagName('tbody');
 
-buttonGenerateKey.addEventListener(
-    'click',
-    ()=>generateKey()
-)
-
 function generateKey() {
     const key = {
         numbers: generateArrayNumbers(1,50,5),
         stars: generateArrayNumbers(1,12,2)
     }
-
+    
     addKeyToTable(key);
-}
+}    
+
+buttonGenerateKey.addEventListener(
+    'click',
+    ()=>generateKey()
+)
+
 
 function addKeyToTable(key){
     tbody[0].innerHTML +=
