@@ -28,3 +28,28 @@ function requestFlickrApi() {
         }
     });
 }
+
+function requestMeteoApi(){
+
+    const searchValue = $('#meteoSearchID').val();
+
+    $.ajax({
+        url: 'https://api.openweathermap.org/data/2.5/weather',
+        data: {
+            q: searchValue,
+            appid: 'a9e49b305a5d14cc0790dbf507251ca1',
+            mode: 'json',
+            units: 'metric',
+            lang: 'pt'
+        },
+        method: 'GET',
+        success: function (response) {
+
+            const temperature = response.main.temp;
+
+            $('#meteoContainer').html('A temperatura em '+response.name+' e de '+temperature);
+
+        }
+    });
+
+}
