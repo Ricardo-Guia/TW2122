@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho APIS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <section class="website">
+        <p>Trabalho APIs</p>
+        <div class="container">
+            <div class="row">
+                <div class="row col-4 info-container" id="information">
+                    <div>
+                        <h5>Information about the player</h5>
+                        <div class="imageAndNation">
+                            <img src="pimage.jpg" id="pImage">
+                            <img src="flag.jpg" id="pNation">
+                        </div>
+                        <div class="playerInformation">
+                            <p id="name">Name: </p>
+                            <p id="birth">Birthdate: </p>
+                            <p id="heightAndWeight">Height/Weight: </p>
+                            <p id="country">Country: </p>
+                            <div class="playerTeam">
+                                <p id="team">Team: </p>
+                                <img src="team.jpg" id="pTeam">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-4" id="searchMenu">
+                    <p>Search about your favourite football players</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control input-text" placeholder="Search players..." id="searchInputID">
+                        <div class="input-group-append">
+                            <button onclick="playerInfo()" class="btn btn-danger btn-lg" type="button"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <h6 id="subInfo">For some players to appear you need to type their full name!</h6>
+                </div>
+                <div class="row col-4 info-container" id="playerHighlights">
+                    <div>
+                        <h5>Highlights from the player  <img src="video.png" id="videoIcon"></h5>
+                        <div id="highlights">
+                            <iframe src="" id="videos"></iframe>
+                            <button type="button" class="btn btn-light" onclick="randomVideo()" id="btnRandomVideo">Click to see another video!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="script.js"></script>
+
+</html>

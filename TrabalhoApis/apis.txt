@@ -1,0 +1,9 @@
+1º API: https://docs.sportmonks.com/football/
+- Informações sobre futebol
+api key: TBKuJ62KlOHcd4FP6sPW1NS9GcdiHMMQiwTnbhIwpyARdb9yHedP7IOND8pO
+
+2º API: https://restcountries.com
+- Informações sobre países
+
+3º API: https://developers.google.com/youtube/v3
+api key: AIzaSyC_5McC6O96wAvAq_H2qugUVC4dEA6GySE
